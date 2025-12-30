@@ -1,0 +1,18 @@
+/* @import "tailwindcss"; */
+
+
+@import "tailwindcss";
+
+@theme {
+  /* This defines your custom seafoam green globally */
+  --color-seafoam: rgba(151, 189, 164)
+;
+}
+
+/* Force pure black text globally */
+@layer base {
+  body {
+    color: #000000;
+    @apply antialiased;
+  }
+}
