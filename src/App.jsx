@@ -77,14 +77,64 @@
 
 
 
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
+// import Navbar from './components/Navbar';
+// import Footer from './components/Footer';
+// import FloatingContact from './components/FloatingContact'; 
+
+
+// import Home from './pages/Home';
+// import AboutUs from './pages/AboutUs';
+// import Services from './pages/Services';
+// import Vacancies from './pages/Vacancies';
+// import Careers from './pages/Careers';
+// import Resources from './pages/Resources';
+// // import Contact from './pages/Contact';
+// import Privacy from './pages/Privacy';
+
+// function App() {
+//   return (
+//     <Router>
+//       <div className="min-h-screen bg-white selection:bg-seafoam/30">
+        
+//         <Navbar />
+        
+//         <main>
+//           <Routes>
+//             <Route path="/" element={<Home />} />
+//             <Route path="/WhyUs" element={<AboutUs />} />
+//             <Route path="/services" element={<Services />} />
+//             <Route path="/vacancies" element={<Vacancies />} />
+//             <Route path="/careers" element={<Careers />} />
+//             <Route path="//News&Blogs" element={<Resources />} />
+//             {/* <Route path="/contact" element={<Contact />} /> */}
+//             <Route path="/privacy" element={<Privacy />} />
+//           </Routes>
+//         </main>
+
+        
+//         <FloatingContact />
+
+//         <Footer />
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact'; 
-
 
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
@@ -92,31 +142,30 @@ import Services from './pages/Services';
 import Vacancies from './pages/Vacancies';
 import Careers from './pages/Careers';
 import Resources from './pages/Resources';
-import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white selection:bg-seafoam/30">
+      <div className="min-h-screen bg-white selection:bg-seafoam/30 flex flex-col">
         
         <Navbar />
         
-        <main>
+        {/* We make this relative so the floating button knows where the footer starts */}
+        <main className="flex-grow relative">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/WhyUs" element={<AboutUs />} />
             <Route path="/services" element={<Services />} />
             <Route path="/vacancies" element={<Vacancies />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="//News&Blogs" element={<Resources />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/News&Blogs" element={<Resources />} />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
-        </main>
 
-        
-        <FloatingContact />
+          {/* Placed inside main, it will now stop at the bottom of this container */}
+          <FloatingContact />
+        </main>
 
         <Footer />
       </div>

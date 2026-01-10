@@ -1,220 +1,98 @@
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { ChevronDown } from 'lucide-react';
-
-// export default function Navbar() {
-//   return (
-//     <nav className="fixed top-0 w-full z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100 h-20 flex items-center">
-//       <div className="container mx-auto px-6 flex justify-between items-center">
-//         <Link to="/" className="text-2xl font-black tracking-tighter text-slate-900">
-//           DIRECT<span className="text-seafoam">CARE</span>
-//         </Link>
-
-//         <div className="hidden lg:flex items-center gap-10">
-//           {/* <Link to="/" className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900">Home</Link> */}
-//           <Link to="/aboutus" className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900">Why Us</Link>
-          
-       
-//           <div className="relative group">
-//             <button className="flex items-center gap-1 text-[11px] font-black uppercase tracking-widest text-slate-400 group-hover:text-seafoam transition-colors">
-//               Services <ChevronDown size={14} />
-//             </button>
-//             <div className="absolute top-full -left-4 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-//               <div className="bg-white shadow-2xl rounded-2xl p-4 w-64 border border-gray-50 flex flex-col gap-1">
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">In-Home & Community</Link>
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">Accommodation</Link>
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">Attendant Care</Link>
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl text-seafoam">Show All Services</Link>
-//               </div>
-//             </div>
-//           </div>
-
-//           <Link to="/vacancies" className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900">Vacancies</Link>
-//           <Link to="/resources" className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900">News & Blogs</Link>
-
-//           <Link to="/careers" className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900">Careers</Link>
-//           <Link to="/contact" className="bg-slate-900 text-white px-8 py-3 rounded-xl text-[11px] font-black uppercase tracking-widest hover:bg-seafoam transition-all">Contact</Link>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { ChevronDown } from 'lucide-react';
-
-// export default function Navbar() {
-//   return (
-//     // Height reduced to h-16, bg-transparent, no border
-//     <nav className="fixed top-0 w-full z-[100] bg-transparent h-16 flex items-center">
-//       <div className="container mx-auto px-6 flex justify-start items-center gap-16"> 
-//         {/* justify-start + gap-16 keeps links close to the logo */}
-        
-//         <Link to="/" className="text-2xl font-black tracking-tighter text-slate-900 shrink-0">
-//           DIRECT<span className="text-seafoam">CARE</span>
-//         </Link>
-
-//         <div className="hidden lg:flex items-center gap-8">
-//           <Link to="/aboutus" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Why Us</Link>
-          
-//           <div className="relative group">
-//             <button className="flex items-center gap-1 text-[11px] font-black uppercase tracking-widest text-slate-500 group-hover:text-seafoam transition-colors">
-//               Services <ChevronDown size={14} />
-//             </button>
-//             <div className="absolute top-full -left-4 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-//               <div className="bg-white shadow-2xl rounded-2xl p-4 w-64 border border-gray-50 flex flex-col gap-1">
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">In-Home & Community</Link>
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">Accommodation</Link>
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl text-seafoam">Show All Services</Link>
-//               </div>
-//             </div>
-//           </div>
-
-//           <Link to="/vacancies" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Vacancies</Link>
-//           <Link to="/resources" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">News & Blogs</Link>
-//           <Link to="/careers" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Careers</Link>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { ChevronDown } from 'lucide-react';
-
-// export default function Navbar() {
-//   return (
-//     <nav className="fixed top-0 w-full z-[100] bg-transparent h-16 flex items-center">
-//       {/* 1. Removed 'container mx-auto' to prevent large side margins.
-//          2. Changed 'px-6' to 'pl-4' to move the logo closer to the left edge.
-//          3. 'gap-8' or 'gap-12' controls the space between logo and links.
-//       */}
-//       <div className="w-full pl-4 pr-6 flex justify-start items-center gap-10"> 
-        
-//         <Link to="/" className="text-2xl font-black tracking-tighter text-slate-900 shrink-0">
-//           DIRECT<span className="text-seafoam">CARE</span>
-//         </Link>
-
-//         <div className="hidden lg:flex items-center gap-8">
-//           <Link to="/aboutus" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Why Us</Link>
-          
-//           <div className="relative group">
-//             <button className="flex items-center gap-1 text-[11px] font-black uppercase tracking-widest text-slate-500 group-hover:text-seafoam transition-colors">
-//               Services <ChevronDown size={14} />
-//             </button>
-//             <div className="absolute top-full -left-4 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-//               <div className="bg-white shadow-2xl rounded-2xl p-4 w-64 border border-gray-50 flex flex-col gap-1">
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">In-Home & Community</Link>
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">Accommodation</Link>
-//                 <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl text-seafoam">Show All Services</Link>
-//               </div>
-//             </div>
-//           </div>
-
-//           <Link to="/vacancies" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Vacancies</Link>
-//           <Link to="/resources" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">News & Blogs</Link>
-//           <Link to="/careers" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Careers</Link>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
-
-
-
 
 
 
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
-  // Close mobile menu whenever the URL changes
   useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  // Prevent scrolling when mobile menu is open
+  useEffect(() => setIsOpen(false), [location]);
+
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
   }, [isOpen]);
 
-  const navLinks = [
-    { name: 'Why Us', path: '/aboutus' },
-    { name: 'Vacancies', path: '/vacancies' },
-    { name: 'News & Blogs', path: '/resources' },
-    { name: 'Careers', path: '/careers' },
+  const serviceOptions = [
+    { name: 'In-Home Support', path: '/services' },
+    { name: 'Accommodation', path: '/vacancies' },
+    { name: 'Nursing Support', path: '/services' },
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-[100] bg-transparent h-16 flex items-center">
-      <div className="w-full pl-4 pr-6 flex justify-between lg:justify-start items-center gap-10">
+    <nav 
+      className={`fixed top-0 w-full z-[100] transition-all duration-300 h-16 flex items-center ${
+        scrolled 
+          ? 'bg-white/95 backdrop-blur-md border-b border-black/5 shadow-sm' 
+          : 'bg-white'
+      }`}
+    >
+      <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
         
         {/* Logo */}
-        <Link to="/" className="text-2xl font-black tracking-tighter text-slate-900 shrink-0 relative z-[110]">
-          DIRECT<span className="text-seafoam">CARE</span>
+        <Link to="/" className="text-xl font-black tracking-tighter text-black shrink-0 relative z-[110]">
+          Medical<span className="text-seafoam font-serif italic">CARE.</span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-8">
-          <Link to="/WhyUs" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Why Us</Link>
+        <div className="hidden lg:flex items-center gap-10">
+          <Link to="/WhyUs" className="nav-item">Why Us</Link>
           
-          <div className="relative group">
-            <button className="flex items-center gap-1 text-[11px] font-black uppercase tracking-widest text-slate-500 group-hover:text-seafoam transition-colors">
-              Services <ChevronDown size={14} />
+          {/* Services with Hover Dropdown */}
+          <div 
+            className="relative h-16 flex items-center"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button className="nav-item flex items-center gap-1 cursor-default outline-none">
+              Services <ChevronDown size={12} className={`transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
             </button>
-            <div className="absolute top-full -left-4 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-              <div className="bg-white shadow-2xl rounded-2xl p-4 w-64 border border-gray-50 flex flex-col gap-1">
-                <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">In-Home & Community</Link>
-                <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl">Accommodation</Link>
-                <Link to="/services" className="p-3 text-[11px] font-bold uppercase hover:bg-gray-50 rounded-xl text-seafoam">Show All Services</Link>
-              </div>
-            </div>
+            
+            <AnimatePresence>
+              {isServicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute top-[60px] -left-4 w-52 bg-white border border-black/5 shadow-xl rounded-2xl py-3 overflow-hidden"
+                >
+                  {serviceOptions.map((opt) => (
+                    <Link
+                      key={opt.name}
+                      to={opt.path}
+                      className="block px-6 py-2 text-[10px] font-black uppercase tracking-widest text-black/50 hover:text-seafoam hover:bg-slate-50 transition-all"
+                    >
+                      {opt.name}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          <Link to="/vacancies" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Vacancies</Link>
-          <Link to="/News&Blogs" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">News & Blogs</Link>
-          <Link to="/careers" className="text-[11px] font-black uppercase tracking-widest text-slate-500 hover:text-seafoam transition-colors">Careers</Link>
+          <Link to="/vacancies" className="nav-item">Vacancies</Link>
+          <Link to="/News&Blogs" className="nav-item">News & Blogs</Link>
+          <Link to="/careers" className="nav-item">Careers</Link>
         </div>
 
-        {/* Mobile Hamburger Button */}
+        {/* Mobile Toggle */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden relative z-[110] p-2 text-slate-900"
+          className="lg:hidden relative z-[110] text-black p-1"
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
@@ -225,42 +103,43 @@ export default function Navbar() {
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-white/95 backdrop-blur-xl lg:hidden z-[105] flex flex-col justify-center px-10"
+            transition={{ type: 'tween', duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+            className="fixed inset-0 bg-white z-[105] lg:hidden flex flex-col justify-center px-10 overflow-hidden"
           >
-            <div className="flex flex-col gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="text-4xl font-black tracking-tighter text-slate-900 hover:text-seafoam transition-colors"
+            <div className="flex flex-col gap-4 items-end w-full">
+              {['Why Us', 'Services', 'Vacancies', 'News & Blogs', 'Careers'].map((name, index) => (
+                <motion.div
+                  key={name}
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + index * 0.05 }}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    to={`/${name.replace(/\s+/g, '')}`}
+                    className="text-[11vw] font-black tracking-tighter text-black leading-[1.05] block text-right hover:text-seafoam transition-colors uppercase"
+                  >
+                    {name}
+                  </Link>
+                </motion.div>
               ))}
-              <Link
-                to="/services"
-                className="text-4xl font-black tracking-tighter text-slate-900 hover:text-seafoam transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                to="/contact"
-                className="text-xl font-black uppercase tracking-widest text-seafoam mt-4"
-              >
-                Get in Touch →
-              </Link>
-            </div>
-
-            {/* Bottom Info in Mobile Menu */}
-            <div className="absolute bottom-10 left-10">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-                Direct Care Assistance
-              </p>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .nav-item {
+          font-size: 10px;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.25em;
+          color: rgba(0,0,0,0.6);
+          transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+          color: #000000;
+        }
+      `}} />
     </nav>
   );
 }
